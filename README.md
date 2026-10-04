@@ -14,6 +14,10 @@ Run in the command line: flatpak run cc.arduino.IDE2
 	Helpful Links I am using:
 	https://docs.arduino.cc/language-reference/en/functions/communication/SPI/
 	https://www.circuitbasics.com/how-to-set-up-spi-communication-for-arduino/
+	Hardware I am using:
+	- Flash memory(using W25Q64JV, only difference is more storage): https://learn.adafruit.com/adafruit-spi-flash-breakouts/pinouts
+	- Generic 4 way logic level shifter
+	- Arduino Uno R3
 	
 	I am using a level shifter in-between the flash memory and the arduino uno. 
 	- Pin 10 ->  LV1 -> CS
