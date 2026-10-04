@@ -10,3 +10,16 @@ Run in the command line: flatpak run cc.arduino.IDE2
 	https://forum.arduino.cc/t/using-external-flash-as-an-alternative-to-sd-card/1079126/10
 	https://github.com/PaulStoffregen/SerialFlash
 
+## Arduino + SPI pin stuff
+	Helpful Links I am using:
+	https://docs.arduino.cc/language-reference/en/functions/communication/SPI/
+	https://www.circuitbasics.com/how-to-set-up-spi-communication-for-arduino/
+	
+	I am using a level shifter in-between the flash memory and the arduino uno. 
+	- Pin 10 ->  LV1 -> CS
+	- Pin 11 -> LV2 -> MOSI
+	- Pin 12 -> LV3 -> MISO
+	- Pin 13 -> LV4 -> SCK
+	
+	Going to start out with a basic transfer/seeing how this works.		
+	
