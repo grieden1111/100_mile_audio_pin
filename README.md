@@ -12,8 +12,10 @@ Run in the command line: flatpak run cc.arduino.IDE2
 
 ## Arduino + SPI pin stuff
 	Helpful Links I am using:
-	https://docs.arduino.cc/language-reference/en/functions/communication/SPI/
-	https://www.circuitbasics.com/how-to-set-up-spi-communication-for-arduino/
+	- https://docs.arduino.cc/language-reference/en/functions/communication/SPI/
+	- https://www.circuitbasics.com/how-to-set-up-spi-communication-for-arduino/
+	- https://electricalflux.com/mcu-coding/spi-for-arduino-beginner-sensor-wiring-guide (very helpful, where i got level shifter knowledge from)	
+	
 	Hardware I am using:
 	- Flash memory(using W25Q64JV, only difference is more storage): https://learn.adafruit.com/adafruit-spi-flash-breakouts/pinouts
 	- Generic 4 way logic level shifter
