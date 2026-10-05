@@ -28,4 +28,7 @@ Run in the command line: flatpak run cc.arduino.IDE2
 	- Pin 13 -> LV4 -> SCK
 	
 	Going to start out with a basic transfer/seeing how this works.		
+
+	UART tranfer (most likely the thing to help transfer files from comp to arduino
+	- https://docs.arduino.cc/learn/communication/uart/
 	
