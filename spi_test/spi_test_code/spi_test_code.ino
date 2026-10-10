@@ -4,7 +4,7 @@
 
 // The MIT License (MIT)
 // Copyright (c) 2019 Ha Thach for Adafruit Industries
-
+/*
 #include <SPI.h>
 #include <SdFat.h>
 
@@ -19,7 +19,7 @@ Adafruit_SPIFlash flash(&flashTransport);
 void setup() {
   Serial.begin(115200);
   while (!Serial) {
-    delay(100); // wait for native usb
+    delay(100);  // wait for native usb
   }
 
   Serial.println("Adafruit Serial Flash Info example");
@@ -34,4 +34,37 @@ void setup() {
 
 void loop() {
   // nothing to do
+}
+*/
+
+#include <SPI.h>
+
+const int csPin = 10; //chip select pin
+
+void setup() {
+  Serial.begin(115200);
+  pinMode(csPin, OUTPUT);
+  digitalWrite(csPin, HIGH); //deselect pin
+
+  SPI.begin();
+}
+
+void loop() {
+  SPISettings mySettings(1000000, MSBFIRST, SPI_MODE0);
+
+  SPI.beginTransaction(mySettings);
+  digitalWrite(csPin, LOW);
+
+  SPI.transfer(0x9F);
+
+  byte response = SPI.transfer(0x00);
+
+  digitalWrite(csPin, HIGH);
+  SPI.endTransaction();
+
+  Serial.print("Sensor Response: 0x");
+  Serial.println(response, HEX);
+
+  delay(10000);
+ 
 }
