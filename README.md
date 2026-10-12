@@ -9,10 +9,6 @@ Run in the command line: flatpak run cc.arduino.IDE2
 	For some reason, I could not understand the MISO line in the SPI protocol. Fortunately, after searching
 	for a chip that has onboard memory, the XIAO ESP32-S3 was incredibly compact and a better option overall!
 	So yay for failing in understanding MISO, as I found a much better chip for the audio pin.
-
-	Helpful Links I am using for XIAO ESP32-S3 chip:
-	- https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
-	- (Very useful) https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/
 	
 	New plan for audio pin:
 	XIAO ESP32-S3 is the microcontroller and storage device for audio files. Will use the MAX 98357 amp
@@ -41,10 +37,19 @@ Run in the command line: flatpak run cc.arduino.IDE2
 	
 	- Hardware: Exchanging USB cables dealth with the error: "ERROR" No port specified, check IDE menus."
 
-
-
-
-
+## Understanding Hardware
+	- XIAO ESP32-S3
+		- https://wiki.seeedstudio.com/SeeedStudio_XIAO_Series_Introduction/
+		- https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/
+	
+	- LittleFS Partition
+		- [Espressif's guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/partition-tables.html)
+		- electricalflux, from [Robert Kim](https://electricalflux.com/mcu-general/set-littlefs-partition-size-arduino-esp32)
+		
+	- MAX98357 audio amp
+		- [Adafruit's guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/overview)
+		- [In-depth Youtube video](https://www.youtube.com/watch?v=HOoPKGAMr0I)
+		- Cirkit Designer's [quick guide with project examples](https://docs.cirkitdesigner.com/component/3600f762-9978-4d93-b74b-f431e1fc831c/max98357a)
 
 ### Libraries I am using
 	- [Espressifs's arduino-esp32](https://github.com/espressif/arduino-esp32)
