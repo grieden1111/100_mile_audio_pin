@@ -19,6 +19,57 @@ Run in the command line: flatpak run cc.arduino.IDE2
 	to power a 8 ohm speaker. A 3.7 li-ion or LiPo battery will power the project. I will solder all together, and use
 	hydrophobic audio mesh all around a 3D printed case to help ensure that any sweat/water will not take out the pin.	
 
+## Setting up LittleFS (Arduino)
+	LittleFS will be storing all audio files
+	- Seems that the esp32 by espressif on arduino ide installed LittleFS already as part of its [libraries](https://github.com/espressif/arduino-esp32)
+
+	Using LittleFs with ESP-IDF
+	- [Step 1](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/index.html)
+	- [Step 2](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/get-started/linux-setup.html#debian-based-linux-installation-via-apt)
+	- Can go back to step 1, which shows you how to create your first project 
+		- Github page project with [ESP32-S3, LittleFS and ESP-IDF](https://github.com/alfredochac/ESP32-Projects_LittleFS/tree/main/ESP32S3_LittleFS_Demo)
+
+### Issues I encountered with LittleFS, Arduino and Hardware
+	- My Arduino IDE did not have a 'Sketch Upload,' so checkout this [github](https://github.com/earlephilhower/arduino-littlefs-upload)
+	- Download the .vsix file
+	- In your CLI: 
+		- Go to ~/.arduinoIDE/plugins/ (might have to create 'plugins' directory
+		- Move .vsix file into 'plugins' directory 
+	- Restart Arduino IDE and launch again
+	- In the Arduino IDE, press CRTL + SHIFT + P and type LittleFS
+	- Should have "Upload... LittleFS...", hit enter key
+	
+	- Hardware: Exchanging USB cables dealth with the error: "ERROR" No port specified, check IDE menus."
+
+
+
+
+
+
+### Libraries I am using
+	- [Espressifs's arduino-esp32](https://github.com/espressif/arduino-esp32)
+	- Earlephilhower's:
+		- [ESP8266Audio](https://github.com/earlephilhower/ESP8266Audio/tree/master)
+		- [arduino-littlfs-upload](https://github.com/earlephilhower/arduino-littlefs-upload)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Will maybe follow up with Flash Memory, but could not figure out why MISO pin was not working properly
 
 ## (Will maybe revisit) Sources that I am using/found to help bring this project to life
@@ -48,5 +99,4 @@ Run in the command line: flatpak run cc.arduino.IDE2
 	Going to start out with a basic transfer/seeing how this works.		
 
 	UART tranfer (most likely the thing to help transfer files from comp to arduino
-	- https://docs.arduino.cc/learn/communication/uart/
-	
+	- https://docs.arduino.cc/learn/communication/uart/	
