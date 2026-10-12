@@ -50,6 +50,7 @@ Run in the command line: flatpak run cc.arduino.IDE2
 		- [Adafruit's guide](https://learn.adafruit.com/adafruit-max98357-i2s-class-d-mono-amp/overview)
 		- [In-depth Youtube video](https://www.youtube.com/watch?v=HOoPKGAMr0I)
 		- Cirkit Designer's [quick guide with project examples](https://docs.cirkitdesigner.com/component/3600f762-9978-4d93-b74b-f431e1fc831c/max98357a)
+		- [Makerguides](https://www.makerguides.com/playing-audio-with-esp32-and-max98357/)
 
 ### Libraries I am using
 	- [Espressifs's arduino-esp32](https://github.com/espressif/arduino-esp32)
